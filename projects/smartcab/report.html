@@ -22684,26 +22684,28 @@ JEnqEQssSZIkSeoRCyxJkiRJ6pH/B6vRIpuc1ydLAAAAAElFTkSuQmCC
 <li>-- forward : -0.60</li>
 <li>-- None : 0.17</li>
 <li>-- right : -0.12</li>
-<li>-- left : -1.06</li>
-</ul>
+<li><p>-- left : -1.06</p>
 <p>In Case 1, the signal is <em>red</em> as there is traffic from left as well head-on. If the agent goes <em>left</em> or <em>forward</em> it will result in a major accident that is reinforced by the policy by negative rewards. The best action is stop and that has a positive reward. This shows the importance of Safety over reliablility.</p>
-<h3 id="Case-2:">Case 2:<a class="anchor-link" href="#Case-2:">&#182;</a></h3><p>('left', 'green', 'right', None)
- -- forward : 0.24
- -- None : -0.18
- -- right : 0.02
- -- left : -0.83</p>
-
-<pre><code>In Case 2, signal is *green*and waypoint in *left* and Smarcab goes *forward* but there is a oncoming vehicle going *right*. According the optimal policy, the Smartcab moving *forward* instead of stopping is a prohibted action as this would lead to a major accident. This error might have happened as the Smartcab might not have explored this state during traning, if it had then the *forward* would have been penalized. This show that smart cab might not be optimally trained as expected.
-
-</code></pre>
+</li>
+</ul>
+<h3 id="Case-2:">Case 2:<a class="anchor-link" href="#Case-2:">&#182;</a></h3><p>('left', 'green', 'right', None)</p>
+<ul>
+<li>-- forward : 0.24</li>
+<li>-- None : -0.18</li>
+<li>-- right : 0.02</li>
+<li><p>-- left : -0.83</p>
+<p>In Case 2, signal is <em>green</em>and waypoint in <em>left</em> and Smarcab goes <em>forward</em> but there is a oncoming vehicle going <em>right</em>. According the optimal policy, the Smartcab moving <em>forward</em> instead of stopping is a prohibted action as this would lead to a major accident. This error might have happened as the Smartcab might not have explored this state during traning, if it had then the <em>forward</em> would have been penalized. This show that smart cab might not be optimally trained as expected.</p>
+</li>
+</ul>
 <h3 id="Case-3:">Case 3:<a class="anchor-link" href="#Case-3:">&#182;</a></h3><p>('forward', 'red', 'left', None)</p>
 <ul>
 <li>-- forward : -1.41</li>
 <li>-- None : 1.83</li>
 <li>-- right : 0.14</li>
-<li>-- left : -1.89</li>
-</ul>
+<li><p>-- left : -1.89</p>
 <p>Case 3 is a converse case of optimal policy, i.e., if the <em>waypoint</em> is not <em>right</em> and signal is <em>red</em> best action is <em>None</em>. Since, in a right-handed traffic system it is always dangerous to go in left or ahead when signal is not <em>green</em> there is a very chance of major accident.</p>
+</li>
+</ul>
 
 </div>
 </div>
