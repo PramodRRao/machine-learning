@@ -25,7 +25,7 @@ class LearningAgent(Agent):
         ###########
         # Set any additional class parameters as needed
 
-        self.Q_matrix = dict.fromkeys(self.valid_actions, 0)
+        #self.Q_matrix = dict.fromkeys(self.valid_actions, 0)
 
         self.t = 0
 
@@ -107,7 +107,8 @@ class LearningAgent(Agent):
         # When learning, check if the 'state' is not in the Q-table
         # If it is not, create a new dictionary for that state
         #   Then, for each action available, set the initial Q-value to 0.0
-        #self.Q_matrix = dict.fromkeys(self.valid_actions, 0)
+        if self.learning:
+            self.Q_matrix = dict.fromkeys(self.valid_actions, 0)
 
         if not state in self.Q:
             self.Q[state] = self.Q_matrix.copy()
