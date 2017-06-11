@@ -22688,13 +22688,13 @@ JEnqEQssSZIkSeoRCyxJkiRJ6pH/B6vRIpuc1ydLAAAAAElFTkSuQmCC
 <p>In Case 1, the signal is <em>red</em> as there is traffic from left as well head-on. If the agent goes <em>left</em> or <em>forward</em> it will result in a major accident that is reinforced by the policy by negative rewards. The best action is stop and that has a positive reward. This shows the importance of Safety over reliablility.</p>
 </li>
 </ul>
-<h3 id="Case-2:">Case 2:<a class="anchor-link" href="#Case-2:">&#182;</a></h3><p>('left', 'green', 'right', None)</p>
+<h3 id="Case-2:">Case 2:<a class="anchor-link" href="#Case-2:">&#182;</a></h3><p>('right', 'red', 'right', 'right')</p>
 <ul>
-<li>-- forward : 0.24</li>
-<li>-- None : -0.18</li>
-<li>-- right : 0.02</li>
-<li><p>-- left : -0.83</p>
-<p>In Case 2, signal is <em>green</em>and waypoint in <em>left</em> and Smarcab goes <em>forward</em> but there is a oncoming vehicle going <em>right</em>. According the optimal policy, the Smartcab moving <em>forward</em> instead of stopping is a prohibted action as this would lead to a major accident. This error might have happened as the Smartcab might not have explored this state during traning, if it had then the <em>forward</em> would have been penalized. This show that smart cab might not be optimally trained as expected.</p>
+<li>-- forward : -0.12</li>
+<li>-- None : 0.10</li>
+<li>-- right : 0.00</li>
+<li><p>-- left : -0.24</p>
+<p>In Case 2, the signal is <em>red</em> and the Smartcab wants to go <em>right</em>. According to the optimal policy, the Smartcab can take a <em>right</em> without causing a accident. In this case, the Smartcab prefers to take no action instead as it has higer Q-Value over <em>right</em>. Although no accident is caused, the action is not optimal is it not going in the direction of waypoint. This is probably one of the reasons why reliablity has A instead on A+.</p>
 </li>
 </ul>
 <h3 id="Case-3:">Case 3:<a class="anchor-link" href="#Case-3:">&#182;</a></h3><p>('forward', 'red', 'left', None)</p>
